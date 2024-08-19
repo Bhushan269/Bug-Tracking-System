@@ -1,14 +1,17 @@
 package service;
 
 import dao.UserDAO;
+import dao.UserDAOImpl;
 import model.User;
+
+import java.sql.SQLException;
 
 public class UserService {
 
     private UserDAO userDAO;
 
-    public UserService() {
-        userDAO = new UserDAO();
+    public UserService() throws SQLException {
+        userDAO = new UserDAOImpl();
     }
 
     public User getUserById(String userId) {

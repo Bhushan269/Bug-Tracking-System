@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet("/UserController")
 public class UserController extends HttpServlet {
@@ -17,7 +18,11 @@ public class UserController extends HttpServlet {
 
     @Override
     public void init() {
-        userService = new UserService();
+        try {
+            userService = new UserService();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

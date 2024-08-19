@@ -1,28 +1,19 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: bhush
-  Date: 18-08-2024
-  Time: 11:30
-  To change this template use File | Settings | File Templates.
---%>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>User Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<h2>Login</h2>
+<h1>User Login</h1>
 <form action="LoginServlet" method="post">
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" required><br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
 
     <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required><br>
+    <input type="password" id="password" name="password" required><br><br>
 
     <input type="submit" value="Login">
 </form>
-<c:if test="${not empty errorMessage}">
-    <p style="color:red;">${errorMessage}</p>
-</c:if>
 </body>
 </html>
-

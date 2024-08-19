@@ -4,6 +4,7 @@ public class User {
     private String userId;
     private String name;
     private String email;
+    private String password;
     private String role; // e.g., "Project Manager", "Developer", "Tester"
 
     // Constructors
@@ -47,5 +48,12 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
