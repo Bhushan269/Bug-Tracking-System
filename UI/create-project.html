@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracking System - New Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bug Tracking System</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="project-details.html">Back to Project List</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Create New Project</h2>
+        <form id="newProjectForm">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" required>
+            
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            
+            <label for="teamMembers">Assign Team Members:</label>
+            <select id="teamMembers" name="teamMembers" multiple>
+                <option value="1">Member A</option>
+                <option value="2">Member B</option>
+            </select>
+            
+            <button type="submit">Create Project</button>
+        </form>
+    </main>
+</body>
+</html>
